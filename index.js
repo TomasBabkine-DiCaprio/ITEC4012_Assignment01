@@ -47,6 +47,39 @@ app.get('/api/honey-badgers', (req, res) => {
     res.send(formattedHTML);
 });
 
+// Honey badgers API route
+app.get('/api/frogs', (req, res) => {
+    // honey badger fun facts
+    const frogsFunFacts = [
+        "There are over 4,700 species of frogs!", 
+        "Every year that a frog goes into hibernation, a new layer of bone forms.", 
+        "Many frogs can jump 20 times their own height.",
+        "Frogs come in all sorts of colours.",
+        "The study of amphibians and reptiles is called Herpetology, and those who study them are called Herpetologists.",
+        "One of the ways you can tell a male frog from a female is by looking at their ears.",
+        "Did you know that frogs moult? This is the process where they shed their skin.",
+        "Croaking is used by male frogs as a way to attract females.",
+        "Frogs have teeth on their upper jaw, which they use to keep their prey in one place until they can swallow it.",
+        "Frogs don’t drink water with their mouths; they “drink” by absorbing water through their skin."
+    ];
+
+    // title of page and fun fact list's opening tag
+    let formattedHTML = "<h1>Here are 10 fun facts concerning Frogs:</h1><ol>";
+
+    // format the fun fact list to display it as HTML
+    for (let i = 0; i < frogsFunFacts.length; i++) {
+        formattedHTML += "<li>" + frogsFunFacts[i] + "</li>";
+    }
+
+    formattedHTML += "<p>Source: https://www.earthrangers.com/top-10/top-ten-awesome-facts-about-frogs/</p>";
+
+    // add the closing list tag
+    formattedHTML += "</ol>";
+
+    // send the formatted HTML to be displayed on the webpage
+    res.send(formattedHTML);
+});
+
 // run the express http server on the port we specified
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
