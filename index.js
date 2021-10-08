@@ -6,10 +6,16 @@ const app = express();
 // specifying the port to listen on
 const port = 8080;
 
+// CSS 
+app.use(express.static("public"));
+
 // API / urls
 // default:
 app.get('/', (req, res) => {
-    res.send("Hi, the express server is running.");
+
+    // send index file
+    // note: I hope sending a file instead of JSON data is okay! I wanted to add styling to the assignment as well as buttons to the two API endpoints :-)
+    res.sendFile('index.html');
 });
 
 // Honey badgers API route
