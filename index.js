@@ -45,7 +45,7 @@ app.get('/api/honey-badgers', (req, res) => {
     formattedHTML += "</ul>";
 
     // send the formatted HTML to be displayed on the webpage
-    res.send(JSON.stringify(formattedHTML));
+    res.send(formattedHTML);
 });
 
 // run the express http server on the port we specified
