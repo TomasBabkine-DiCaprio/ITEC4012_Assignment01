@@ -6,16 +6,16 @@ const app = express();
 // specifying the port to listen on
 const port = 8080;
 
+// CSS 
+app.use(express.static("public"));
+
 // API / urls
 // default:
 app.get('/', (req, res) => {
-    // Home page
-    const title = "<h1>Tomas Babkine-Di Caprio - ITEC 4012 - Assignment 01<br>101124714</h1>";
 
-    // format html
-    let formattedHTML = title;
-    // send the formatted HTML to be displayed on the webpage
-    res.send(formattedHTML);
+    // send index file
+    // note: I hope sending a file instead of JSON data is okay! I wanted to add styling to the assignment as well as buttons to the two API endpoints :-)
+    res.sendFile('index.html');
 });
 
 // run the express http server on the port we specified
