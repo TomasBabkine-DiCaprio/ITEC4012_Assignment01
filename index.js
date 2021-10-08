@@ -1,4 +1,4 @@
-//Set up app
+// Set up app
 // requiring express
 const express = require('express');
 // initialize the express app
@@ -12,13 +12,7 @@ app.use(express.static(__dirname + '/public'));
 // API / urls
 // default:
 app.get('/', (req, res) => {
-    // Home page
-    const title = "<h1>Tomas Babkine-Di Caprio - ITEC 4012 - Assignment 01<br>101124714</h1>";
 
-<<<<<<< Updated upstream
-    // format html
-    let formattedHTML = title;
-=======
     // send index file
     // note: I hope sending a file instead of JSON data is okay! I wanted to add styling to the assignment as well as buttons to the two API endpoints :-)
     res.sendFile(__dirname + 'index.html');
@@ -85,7 +79,6 @@ app.get('/api/frogs', (req, res) => {
     // add the closing list tag
     formattedHTML += "</ol>";
 
->>>>>>> Stashed changes
     // send the formatted HTML to be displayed on the webpage
     res.send(formattedHTML);
 });
