@@ -31,15 +31,17 @@ app.get('/api/honey-badgers', (req, res) => {
     ];
 
     // title of page and fun fact list's opening tag
-    let formattedHTML = "<h1>Here are 10 fun facts concerning Honey Badgers:</h1><ul>";
+    let formattedHTML = "<h1>Here are 10 fun facts concerning Honey Badgers:</h1><ol>";
 
     // format the fun fact list to display it as HTML
     for (let i = 0; i < badgersFunFacts.length; i++) {
         formattedHTML += "<li>" + badgersFunFacts[i] + "</li>";
     }
 
+    formattedHTML += "<p>Source: https://tandatula.com/blog/posts/10-fun-facts-for-kids-about-honey-badgers/</p>";
+
     // add the closing list tag
-    formattedHTML += "</ul>";
+    formattedHTML += "</ol>";
 
     // send the formatted HTML to be displayed on the webpage
     res.send(formattedHTML);
