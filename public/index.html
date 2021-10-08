@@ -27,11 +27,11 @@
         line-height: 1.4;
         margin-top: 0;
       } 
-      h3 {
-        font-weight: 100;
-        font-size: 14px;
-        line-height: 1.4;
-      } 
+      
+      .buttonContainer {
+        display: flex;
+        justify-content: space-evenly;
+      }
       
       .apiButtons {
         margin-top: 40px;
@@ -61,7 +61,12 @@
       <section class="intro">
         <h1>Tomas Babkine-Di Caprio<br>Assignment 01 - Basic Node Server<br>IMD4012 - Fall 2021</h1>
 
-        <a class="apiButtons" href="/api/honey-badgers">Honey Badgers</a>
+        <p>Use the following two buttons for the server to return 10 fun facts concerning honey badgers and frogs</p>
+
+        <div class="buttonContainer">
+            <a class="apiButtons" href="/api/honey-badgers">Honey Badgers</a>
+            <a class="apiButtons" href="/api/frogs">Frogs</a>
+        </div>
       </section>
     </body>
 </html>

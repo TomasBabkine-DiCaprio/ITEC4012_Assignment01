@@ -8,7 +8,6 @@ const port = 8080;
 // set root path of server ...
 app.use(express.static(__dirname + '/public')); 
 
-
 // API / urls
 // default:
 app.get('/', (req, res) => {
