@@ -6,9 +6,6 @@ const app = express();
 // specifying the port to listen on
 const port = 8080;
 
-// CSS 
-app.use(express.static("public"));
-
 // API / urls
 // default:
 app.get('/', (req, res) => {
